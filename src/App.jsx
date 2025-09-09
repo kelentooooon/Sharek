@@ -1,11 +1,11 @@
 import "./App.css";
-import Theme1 from "./pages/themes/Theme6";
+import Theme1 from "./pages/themes/Theme10";
 
 
 function App() {
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900">
+    <div >
       <Theme1 />
     </div>
   );
