@@ -1,14 +1,11 @@
 import "./App.css";
-import Theme1 from "./pages/themes/Theme10";
-
+import Home from "./pages/Home";
 
 function App() {
 
   return (
     <div className="app">
-      <Navbar />
       <Home />
-      <Footer />
     </div>
   );
 }

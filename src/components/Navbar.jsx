@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { CiShoppingCart } from "react-icons/ci";
 import { TiUser } from "react-icons/ti";
 import "./Navbar.css";
-import logo from "../assets/web design sharek صور-01.png";
+// import logo from "../assets/web design sharek صور-01.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,7 +21,7 @@ const Navbar = () => {
       <div className="navbar-container ">
         {/* Logo */}
         <div className="navbar-logo">
-          <img src={logo} alt="شارك" className="logo-image" />
+          {/* <img src={logo} alt="شارك" className="logo-image" /> */}
           <span className="logo-text">شارك</span>
         </div>
 
