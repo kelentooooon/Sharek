@@ -1,12 +1,16 @@
 import "./App.css";
-import Theme1 from "./pages/themes/Theme10";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
 
 
 function App() {
 
   return (
-    <div >
-      <Theme1 />
+    <div className="app">
+      <Navbar />
+      <Home />
+      <Footer />
     </div>
   );
 }

@@ -1,0 +1,86 @@
+/* Global Color Variables */
+:root {
+  /* Primary Blue Colors */
+  --color-primary-blue: #3c93db;
+  --color-primary-blue-dark: #1a6bc5;
+  
+  /* Secondary Colors */
+  --color-light-blue: #c9dae2;
+  
+  /* Green Colors */
+  --color-primary-green: #20846c;
+  --color-light-green: #93cebd;
+  --color-accent-green: #3abf99;
+  
+  /* Additional Utility Colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray-light: #f8f9fa;
+  --color-gray: #6c757d;
+  --color-gray-dark: #343a40;
+}
+
+/* Global Styles */
+
+body {
+  font-family: 'Arial', 'Segoe UI', 'Tahoma', sans-serif;
+  line-height: 1.6;
+  color: var(--color-gray-dark);
+  background-color: var(--color-white);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+/* Button Utilities */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: var(--color-primary-blue);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-blue-dark);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: var(--color-primary-green);
+  color: var(--color-white);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-accent-green);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--color-primary-blue);
+  color: var(--color-primary-blue);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-primary-blue);
+  color: var(--color-white);
+}
+
