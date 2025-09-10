@@ -1,11 +1,11 @@
 import "./App.css";
-import Home from "./pages/Home";
+import Create from "./pages/CreateCard";
 
 function App() {
 
   return (
     <div className="app">
-      <Home />
+      <Create />
     </div>
   );
 }
