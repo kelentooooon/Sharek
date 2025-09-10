@@ -1,5 +1,5 @@
 import "./App.css";
-import Theme1 from "./pages/themes/Theme10";
+import Theme1 from "./pages/themes/Theme20";
 
 
 function App() {
