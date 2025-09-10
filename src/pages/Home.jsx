@@ -188,24 +188,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="cta">
-        <div className="container">
-          <div className="cta-content">
-            <h2>انطلق مع شارك الآن</h2>
-            <p>
-              دع شارك يحدد طريق تحويل منيستقل الأعمال لديك واختبر مدى فاعلية
-              واختصار مع تقنية NFC المطور وقدام الإعلامية. تواصل مع العلم فى
-              دقائق اليوم.
-            </p>
-            <div className="cta-buttons">
-              <button className="btn-primary">احصل على بطاقتك الآن</button>
-              <button className="btn-outline">تعرف على المزيد</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <Footer />
     </div>
   );
