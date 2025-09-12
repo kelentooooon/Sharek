@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 /* Global Color Variables */
 :root {
   /* Primary Blue Colors */
-  --color-primary-blue: #3c93db;
+  --color-primary-blue: hsl(207, 69%, 55%);
   --color-primary-blue-dark: #1a6bc5;
   
   /* Secondary Colors */
@@ -21,9 +23,8 @@
 }
 
 /* Global Styles */
-
 body {
-  font-family: 'Arial', 'Segoe UI', 'Tahoma', sans-serif;
+  font-family: 'Outfit', sans-serif;
   line-height: 1.6;
   color: var(--color-gray-dark);
   background-color: var(--color-white);

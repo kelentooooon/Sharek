@@ -1,12 +1,8 @@
 import twoCardsImage from '../assets/twocards.png';
-import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
-
 
 const CreateCard = () => {
   return (
     <>
-    <Navbar />
     <div className="min-h-screen" style={{backgroundColor: 'var(--color-white)'}}>
       
       {/* Header - Create Button */}
@@ -46,7 +42,6 @@ const CreateCard = () => {
       
     </div>
 
-    <Footer />
     </>
   );
 };

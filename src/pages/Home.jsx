@@ -1,7 +1,5 @@
 import React from "react";
 import "./Home.css";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import nfcCard from "../assets/card.png";
 import nfcSticker from "../assets/sticker.png";
 import nfcStand from "../assets/Stand.png";
@@ -17,7 +15,6 @@ import {
 const Home = () => {
   return (
     <div className="home">
-      <Navbar />
 
       {/* Products Section */}
       <section className="pb-20 bg-gray-50">
@@ -189,7 +186,6 @@ const Home = () => {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 };
