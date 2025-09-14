@@ -5,6 +5,9 @@ import CreateCard from "./pages/CreateCard";
 import Layout from './layout/Layout';
 import CreateBusinessCard from './pages/CreateBusinessCard';
 import PageNotFound from './pages/PageNotFound';
+import Login from './pages/Login';  
+import Register from './pages/Register';
+import ForgetPassword from './pages/ForgetPassword';
 
 function App() {
 
@@ -15,6 +18,9 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/create-card' element={<CreateCard />} />
           <Route path='digital-business-cards' element={<CreateBusinessCard />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register />} />
+          <Route path='/forget-password' element={<ForgetPassword />} />
         </Route>
         <Route path='*' element={<PageNotFound />} />
       </Routes>

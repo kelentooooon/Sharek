@@ -1,6 +1,7 @@
 import React from "react";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaLink } from "react-icons/fa";
-import profileimg from "../../assets/width_304.jpeg";
+import profileimg from "../../src/assets/width_304.jpeg";
+
 
 const Theme13 = () => {
     return (
