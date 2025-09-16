@@ -2,7 +2,7 @@ import React from "react";
 import "./Home.css";
 import nfcCard from "../assets/card.png";
 import nfcSticker from "../assets/sticker.png";
-import nfcStand from "../assets/Stand.png";
+import nfcStand from "../assets/stand.png";
 import {
   FaQrcode,
   FaWifi,
