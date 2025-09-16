@@ -65,8 +65,8 @@ const Navbar = () => {
           <div className="cart-icon">
             <CiShoppingCart size={24} />
           </div>
-          <button className="login-btn">تسجيل الدخول</button>
-          <button className="signup-btn">إنشاء حساب</button>
+          <button className="login-btn"><a href="/login">تسجيل الدخول</a></button>
+          <button className="signup-btn"><a href="/register">إنشاء حساب</a></button>
           <div className="profile-icon">
             <TiUser size={24} />
           </div>
@@ -100,12 +100,12 @@ const Navbar = () => {
               </a>
             </li>
             <li className="mobile-nav-item">
-              <a href="#" className="mobile-nav-link">
+              <a href="/login" className="mobile-nav-link">
                 تسجيل الدخول
               </a>
             </li>
             <li className="mobile-nav-item">
-              <a href="#" className="mobile-nav-link">
+              <a href="/register" className="mobile-nav-link">
                 إنشاء حساب
               </a>
             </li>
