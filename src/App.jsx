@@ -8,6 +8,11 @@ import PageNotFound from './pages/PageNotFound';
 import Login from './pages/Login';  
 import Register from './pages/Register';
 import ForgetPassword from './pages/ForgetPassword';
+import DashboardHome from './pages/dashboard/Home';
+import Plans from './pages/dashboard/Plans';
+import Customers from './pages/dashboard/Customers';
+import Cards from './pages/dashboard/Cards';
+import Settings from './pages/dashboard/Settings';
 
 function App() {
 
@@ -18,10 +23,15 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/create-card' element={<CreateCard />} />
           <Route path='digital-business-cards' element={<CreateBusinessCard />} />
+        </Route>
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
           <Route path='/forget-password' element={<ForgetPassword />} />
-        </Route>
+          <Route path='/dashboard' element={<DashboardHome />} />
+          <Route path='/dashboard/plans' element={<Plans />} />
+          <Route path='/dashboard/customers' element={<Customers />} />
+          <Route path='/dashboard/cards' element={<Cards />} />
+          <Route path='/dashboard/settings' element={<Settings />} />
         <Route path='*' element={<PageNotFound />} />
       </Routes>
     </Router>
