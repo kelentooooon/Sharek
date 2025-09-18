@@ -7,7 +7,8 @@ import {
   FaClipboardList,
   FaChartLine,
   FaCog,
-  FaTimes
+  FaTimes,
+  FaPalette
 } from 'react-icons/fa';
 import BlueLogo from '../../assets/BlueLogo.png';
 
@@ -52,6 +53,12 @@ const Sidebar = ({ activeItem = 'التحليلات', isOpen, onClose }) => {
       icon: FaTh, 
       active: activeItem === 'البطاقات',
       path: '/dashboard/cards'
+    },
+    { 
+      name: 'القوالب', 
+      icon: FaPalette, 
+      active: activeItem === 'testthemes',
+      path: '/dashboard/themes'
     },
     { 
       name: 'الإعدادات', 
