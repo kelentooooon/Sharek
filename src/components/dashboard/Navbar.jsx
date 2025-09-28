@@ -8,6 +8,7 @@ import {
   FaBars,
   FaTimes
 } from 'react-icons/fa';
+import logo from '../../assets/BlueLogo.png';
 
 const Navbar = ({ onToggleSidebar, isSidebarOpen }) => {
   const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false);
@@ -49,7 +50,7 @@ const Navbar = ({ onToggleSidebar, isSidebarOpen }) => {
           {/* Blue Logo */}
           <div className="flex-1">
             <img 
-              src="/src/assets/BlueLogo.png" 
+              src={logo}
               alt="Sharek Logo" 
               className="h-8 sm:h-10 w-auto"
             />
