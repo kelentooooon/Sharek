@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import { FaLock } from 'react-icons/fa';
 
 const Login = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: '',
     password: ''
@@ -56,9 +58,18 @@ const Login = () => {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
       console.log('Login attempt:', formData);
+
       // Handle successful login here
+      // You can add your actual authentication logic here
+      // For now, we'll simulate a successful login
+      
+      // Navigate to dashboard after successful login
+      navigate('/dashboard');
+      
     } catch (error) {
       console.error('Login error:', error);
+      // You can set error state here if needed
+      setErrors({ general: 'حدث خطأ أثناء تسجيل الدخول. يرجى المحاولة مرة أخرى.' });
     } finally {
       setIsLoading(false);
     }
@@ -78,6 +89,13 @@ const Login = () => {
 
         {/* Login Form */}
         <form className="space-y-6" onSubmit={handleSubmit}>
+          {/* General Error Message */}
+          {errors.general && (
+            <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm text-center">
+              {errors.general}
+            </div>
+          )}
+          
           {/* Username Field */}
           <div>
             <label className="sr-only" htmlFor="username">اسم المستخدم</label>
@@ -118,12 +136,12 @@ const Login = () => {
 
           {/* Forgot Password Link */}
           <div className="flex items-center justify-end">
-            <a 
+            <Link 
               className="text-sm font-medium text-green-600 hover:text-green-700 transition-colors duration-200" 
-              href="/forget-password"
+              to="/forget-password"
             >
               نسيت كلمة المرور؟
-            </a>
+            </Link>
           </div>
 
           {/* Submit Button */}
@@ -148,12 +166,12 @@ const Login = () => {
         {/* Sign Up Link */}
         <p className="text-center text-sm text-gray-600">
           لا تملك حساباً؟
-          <a 
+          <Link 
             className="font-medium text-sky-600 hover:text-sky-700 mr-1 transition-colors duration-200" 
-            href="/register"
+            to="/register"
           >
             إنشاء حساب جديد
-          </a>
+          </Link>
         </p>
       </div>
     </div>
