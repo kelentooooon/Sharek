@@ -1,6 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import twoCardsImage from '../assets/twocards.png';
 
 const CreateCard = () => {
+  const navigate = useNavigate();
+
   return (
     <>
     <div className="min-h-screen" style={{backgroundColor: 'var(--color-white)'}}>
@@ -8,6 +11,8 @@ const CreateCard = () => {
       {/* Header - Create Button */}
       <div className="text-center py-12">
         <button 
+          type="button"
+          onClick={() => navigate('/digital-business-cards')}
           className="px-12 py-4 rounded-full text-white text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           style={{backgroundColor: 'var(--color-primary-green)'}}
         >

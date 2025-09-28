@@ -11,6 +11,7 @@ import {
   FaBolt,
   FaGem,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -29,10 +30,12 @@ const Home = () => {
                   alt="NFC Card"
                 />
               </div>
-              <div className="text-center border p-6 border-amber-50 pt-25 rounded-lg bg-white shadow-2xl shadow-gray-400 ">
-                <h3 className="text-2xl font-semibold text-gray-800 border border-blue-500 bg-blue-500 w-1/3 mx-auto mb-3 rounded-2xl">
-                  بطاقة NFC
-                </h3>
+              <div className="flex flex-col gap-2 text-center border p-6 border-amber-50 pt-25 rounded-lg bg-white shadow-2xl shadow-gray-400 ">
+                <Link to="/create-card" className="text-2xl font-semibold text-white border border-blue-500 bg-blue-500 hover:bg-blue-800 transition-all duration-300 px-6 mx-auto mb-3 rounded-xl"
+                  aria-label="إنشاء بطاقة NFC"
+                >
+                  كارت NFC
+                </Link>
                 <p className="text-gray-600 text-lg">
                   بطاقات NFC هي بطاقات ذكية تحتوي على شريحة NFC مدمجة تتيح تخزين
                   ومشاركة المعلومات الرقمية بسهولة. يمكن استخدامها لمشاركة
@@ -50,10 +53,14 @@ const Home = () => {
                   alt="NFC Stand"
                 />
               </div>
-              <div className="text-center border p-6 border-amber-50 pt-25 rounded-lg bg-white shadow-2xl shadow-gray-400 ">
-                <h3 className="text-2xl font-semibold text-gray-800 border border-blue-500 bg-blue-500 w-1/3 mx-auto mb-3 rounded-2xl">
-                  بطاقة NFC
-                </h3>
+              <div className="flex flex-col gap-2  text-center border p-6 border-amber-50 pt-25 rounded-lg bg-white shadow-2xl shadow-gray-400 ">
+                <Link
+                  to="/create-card"
+                  className="text-2xl font-semibold text-white border border-blue-500 bg-blue-500 hover:bg-blue-800 transition-all duration-300 px-6 mx-auto mb-3 rounded-xl"
+                  aria-label="إنشاء بطاقة NFC"
+                >
+                  NFC للهاتف
+                </Link>
                 <p className="text-gray-600 text-lg">
                   بطاقات NFC هي بطاقات ذكية تحتوي على شريحة NFC مدمجة تتيح تخزين
                   ومشاركة المعلومات الرقمية بسهولة. يمكن استخدامها لمشاركة
@@ -63,7 +70,7 @@ const Home = () => {
               </div>
             </div>
 
-             {/* NFC Sticker */}
+            {/* NFC Sticker */}
             <div>
               <div>
                 <img
@@ -72,10 +79,12 @@ const Home = () => {
                   alt="NFC Sticker"
                 />
               </div>
-              <div className="text-center border p-6 border-amber-50 pt-25 rounded-lg bg-white shadow-2xl shadow-gray-400 ">
-                <h3 className="text-2xl font-semibold text-gray-800 border border-blue-500 bg-blue-500 w-1/3 mx-auto mb-3 rounded-2xl">
-                  بطاقة NFC
-                </h3>
+              <div className="flex flex-col gap-2  text-center border p-6 border-amber-50 pt-25 rounded-lg bg-white shadow-2xl shadow-gray-400 ">
+                <Link to='/create-card' className="text-2xl font-semibold text-white border border-blue-500 bg-blue-500 hover:bg-blue-800 transition-all duration-300 px-6 mx-auto mb-3 rounded-xl"
+                  aria-label="إنشاء بطاقة NFC"
+                >
+                  NFC ستاند
+                </Link>
                 <p className="text-gray-600 text-lg">
                   بطاقات NFC هي بطاقات ذكية تحتوي على شريحة NFC مدمجة تتيح تخزين
                   ومشاركة المعلومات الرقمية بسهولة. يمكن استخدامها لمشاركة
@@ -91,12 +100,12 @@ const Home = () => {
       {/* Features Section */}
       <section
         className="features bg-gradient-to-b from-sky-600 to-sky-700"
-        
+
       >
         <div className="container">
           <div className="features-content">
             <div className="features-text">
-              
+
               <div className="features-grid">
                 <div className="feature-item">
                   <div className="feature-icon">
