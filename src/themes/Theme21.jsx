@@ -1,36 +1,49 @@
 import React from "react";
-import { FaPhone, FaEnvelope, FaComments, FaMapMarkerAlt, FaLink, FaGlobe } from "react-icons/fa";
+import {
+  FaPhone,
+  FaEnvelope,
+  FaComments,
+  FaMapMarkerAlt,
+  FaLink,
+  FaGlobe,
+} from "react-icons/fa";
 import profileimg from "../assets/width_304.jpeg";
 import shareLogo from "../assets/BlueLogo.png";
 
 const Theme21 = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex justify-center items-center p-4 font-sans">
-      <div className="w-full max-w-sm bg-white rounded-3xl overflow-hidden shadow-2xl">
-        {/* Header with Logo */}
-        <div className="bg-white px-6 pt-6 pb-4 text-center">
-          <div className="flex justify-center items-center">
-            <img src={shareLogo} alt="Sharek Logo" className="w-30 h-20 object-contain" />
-          </div>
-        </div>
-
-        {/* Profile Section */}
-        <div className="bg-white px-6 pb-6 text-center">
-          {/* Profile Image */}
-          <div className="relative mb-6">
-            <div className="w-40 h-48 mx-auto rounded-2xl overflow-hidden bg-gray-200 shadow-lg">
+      <div className="w-full max-w-sm bg-blue-500 rounded-3xl overflow-hidden shadow-2xl">
+        <div className="rounded-b-3xl overflow-hidden">
+          {/* Header with Logo */}
+          <div className="bg-white px-6 pt-6 pb-4 text-center">
+            <div className="flex justify-center items-center">
               <img
-                src={profileimg}
-                alt="Ahmed Mohamed"
-                className="w-full h-full object-cover"
+                src={shareLogo}
+                alt="Sharek Logo"
+                className="w-30 h-20 object-contain"
               />
             </div>
           </div>
-          
-          {/* Name and Title */}
-          <h2 className="text-3xl font-bold text-blue-600 mb-1">Ahmed</h2>
-          <h2 className="text-3xl font-bold text-blue-600 mb-3">Mohamed</h2>
-          <p className="text-gray-600 text-lg mb-6">Company</p>
+
+          {/* Profile Section */}
+          <div className="bg-white px-6 pb-6 text-center">
+            {/* Profile Image */}
+            <div className="relative mb-6">
+              <div className="w-40 h-48 mx-auto rounded-2xl overflow-hidden bg-gray-200 shadow-lg">
+                <img
+                  src={profileimg}
+                  alt="Ahmed Mohamed"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Name and Title */}
+            <h2 className="text-3xl font-bold text-blue-600 mb-1">Ahmed</h2>
+            <h2 className="text-3xl font-bold text-blue-600 mb-3">Mohamed</h2>
+            <p className="text-gray-600 text-lg mb-6">Company</p>
+          </div>
         </div>
 
         {/* Blue Section */}
@@ -55,7 +68,7 @@ const Theme21 = () => {
           <div className="mb-8">
             <h3 className="text-2xl font-bold text-center mb-4">About Me</h3>
             <p className="text-blue-100 text-base leading-relaxed text-center px-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
+              Description
             </p>
           </div>
 
@@ -85,11 +98,15 @@ const Theme21 = () => {
           <div className="space-y-4">
             <div className="bg-white bg-opacity-95 rounded-full py-4 px-6 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-200 cursor-pointer">
               <FaLink className="w-5 h-5 text-blue-600 mr-3 flex-shrink-0" />
-              <span className="text-blue-800 text-sm font-medium truncate">https://www.examplelink.com</span>
+              <span className="text-blue-800 text-sm font-medium truncate">
+                https://www.examplelink.com
+              </span>
             </div>
             <div className="bg-white bg-opacity-95 rounded-full py-4 px-6 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-200 cursor-pointer">
               <FaGlobe className="w-5 h-5 text-blue-600 mr-3 flex-shrink-0" />
-              <span className="text-blue-800 text-sm font-medium truncate">https://www.examplelink.com</span>
+              <span className="text-blue-800 text-sm font-medium truncate">
+                https://www.examplelink.com
+              </span>
             </div>
           </div>
         </div>

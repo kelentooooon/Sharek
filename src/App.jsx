@@ -14,6 +14,7 @@ import Customers from './pages/dashboard/Customers';
 import Cards from './pages/dashboard/Cards';
 import Settings from './pages/dashboard/Settings';
 import TestTemes from './pages/dashboard/Themes';
+import Theme from './themes/Theme27';
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
           <Route path='/dashboard/cards' element={<Cards />} />
           <Route path='/dashboard/settings' element={<Settings />} />
           <Route path='/dashboard/themes' element={<TestTemes />} />
+          <Route path='/themes' element={<Theme />} />
         <Route path='*' element={<PageNotFound />} />
       </Routes>
     </Router>

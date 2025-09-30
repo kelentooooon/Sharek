@@ -4,7 +4,7 @@ import profileimg from "../assets/width_304.jpeg";
 
 import bgImage from '../assets/bgfortheme2.jpg';
 
-const Theme11 = () => {
+const Theme20 = () => {
     return (
         <div className="min-h-screen flex justify-center items-center font-sans">
             <div className="w-full max-w-sm bg-black">
@@ -115,4 +115,4 @@ const Theme11 = () => {
     );
 };
 
-export default Theme11;
+export default Theme20;
