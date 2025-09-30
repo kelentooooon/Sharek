@@ -1,117 +1,131 @@
 import React from "react";
-import { FaLink } from "react-icons/fa";
+import {
+  FaPhone,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaLink,
+  FaMobileAlt,
+} from "react-icons/fa";
 import profileimg from "../assets/width_304.jpeg";
-
-import bgImage from '../assets/bgfortheme2.jpg';
+import shareLogo from "../assets/BlackLogo.png";
 
 const Theme19 = () => {
-    return (
-        <div className="min-h-screen flex justify-center items-center font-sans">
-            <div className="w-full max-w-sm bg-[#F4EEE6]">
-                <div className="relative mb-8">
-                    <div className="w-full h-66 sm:h-76 overflow-hidden bg-gray-600"
-                        style={{ clipPath: 'ellipse(120% 100% at 50% 0%)' }}
-                    >
-                        <img
-                            src={bgImage}
-                            alt="background Image"
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
-                    <div className="absolute bottom-14 left-1/2 transform -translate-1/2  border-4 border-white rounded-full overflow-hidden">
-                        <img src={profileimg} alt="profile" className="w-30 sm:w-35 h-30 sm:h-35 rounded-full mx-auto object-cover" />
-                    </div>
-                    <div className="p-4 text-[#3F3F3F] text-center mt-10">
-                        <div className="-space-y-3">
-                            <h2 className="text-2xl sm:text-3xl leading-tight">Ahmed</h2>
-                            <h2 className="text-2xl sm:text-3xl font-bold leading-tight">Mohamed</h2>
-                        </div>
-                        <p className="font-bold text-sm sm:text-base font-mediumbg-opacity-50">
-                            title
-                        </p>
-                        <p className="font-medium text-sm sm:text-base mt-1">
-                            Company
-                        </p>
-                    </div>
-                </div>
-                {/* About me */}
-                <div className="mb-8 bg-white mx-4 p-4 rounded-2xl shadow-md">
-                    <h2 className="text-2xl sm:text-4xl font-bold text-[#3F3F3F] mb-4 mx-auto border-b-2 border-gray-500 w-fit">
-                        About Me
-                    </h2>
-                    <p className="text-gray-400 text-sm sm:text-base leading-relaxed text-center mb-6">
-                        Description
-                    </p>
-                </div>
-                {/* Contact Me */}
-                <div className="mb-8 bg-white mx-4 p-4 rounded-2xl shadow-md">
-                    <h2 className="text-2xl sm:text-4xl font-bold text-[#3F3F3F] mb-4 mx-auto border-b-2 border-gray-500 w-fit">
-                        Contact Me
-                    </h2>
-
-                    <div className="space-y-4 py-4 px-3 sm:px-6 text-left">
-                        <div>
-                            <h3 className="text-xl sm:text-2xl font-bold text-[#3F3F3F]">
-                                Call Me
-                            </h3>
-                            <p className="text-gray-400 text-base sm:text-lg">05064152216</p>
-                        </div>
-                        <div>
-                            <h3 className="text-xl sm:text-2xl font-bold text-[#3F3F3F]">
-                                Email
-                            </h3>
-                            <p className="text-gray-400 text-base sm:text-lg break-all">
-                                example@email.com
-                            </p>
-                        </div>
-                        <div>
-                            <h3 className="text-xl sm:text-2xl font-bold text-[#3F3F3F]">
-                                Address
-                            </h3>
-                            <div className="text-gray-400 text-base sm:text-lg -space-y-1">
-                                <p>street</p>
-                                <p>City, State, Zipcode</p>
-                                <p>Country</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                {/* Links */}
-                <div className="mb-8 bg-white mx-4 p-4 rounded-2xl shadow-md">
-                    <h2 className="text-2xl sm:text-4xl font-bold text-[#3F3F3F] mb-4 mx-auto border-b-2 border-gray-500 w-fit">
-                        Links
-                    </h2>
-
-                    <div className="space-y-6 px-3 sm:px-6">
-                        <div className="flex items-center group">
-                            <FaLink className="text-[#3F3F3F] mr-4 text-xl group-hover:text-red-400 transition-colors duration-200" />
-                            <a
-                                href="https://www.examplelink.com"
-                                className="text-[#3F3F3F] hover:text-red-400 transition-colors duration-200 text-base sm:text-lg break-all"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                https://www.examplelink.com
-                            </a>
-                        </div>
-
-                        <div className="flex items-center group">
-                            <FaLink className="text-[#3F3F3F] mr-4 text-xl group-hover:text-red-400 transition-colors duration-200" />
-                            <a
-                                href="#"
-                                className="text-[#3F3F3F] hover:text-red-400 transition-colors duration-200 text-base sm:text-lg"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Another Link
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  return (
+    <div className="min-h-screen bg-black flex justify-center items-center font-sans">
+      {/* Logo Header */}
+      <div className="absolute py-40 text-center bg-white w-full right-0 left-0 top-0">
+        <div className="flex justify-center items-center relative -top-20">
+          <img
+            src={shareLogo}
+            alt="Sharek Logo"
+            className="w-40 h-20 object-contain "
+          />
         </div>
-    );
+      </div>
+      <div className="w-full max-w-sm z-10 pt-50 px-6">
+        {/* Rounded Profile Image */}
+        <div className="text-center mb-8">
+          <div className="w-72 h-96 mx-auto rounded-tr-[100px] rounded-bl-[100px] overflow-hidden shadow-2xl bg-gray-600">
+            <img
+              src={profileimg}
+              alt="Profile"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Name and Title */}
+        <div className="text-left mb-8">
+          <h1 className="text-4xl sm:text-5xl font-bold text-pink-500 mb-2">
+            Ahmed Mohamed
+          </h1>
+          <p className="text-pink-400 text-lg mb-1">title</p>
+          <p className="text-pink-400 text-lg">Company</p>
+        </div>
+
+        {/* Pink Contact Icons Row */}
+        <div className="flex justify-center space-x-6 mb-8">
+          <div className="w-16 h-16 bg-pink-500 rounded-tl-[30px] rounded-br-[30px] flex items-center justify-center shadow-lg">
+            <FaPhone className="w-8 h-8 text-white" />
+          </div>
+          <div className="w-16 h-16 bg-pink-500 rounded-tl-[30px] rounded-br-[30px] flex items-center justify-center shadow-lg">
+            <FaEnvelope className="w-8 h-8 text-white" />
+          </div>
+          <div className="w-16 h-16 bg-pink-500 rounded-tl-[30px] rounded-br-[30px] flex items-center justify-center shadow-lg">
+            <FaMapMarkerAlt className="w-8 h-8 text-white" />
+          </div>
+        </div>
+
+        {/* Pink About Me Button */}
+        <div className="text-center mb-8">
+          <div className="inline-block bg-pink-500 text-white px-8 py-4 rounded-tr-[40px] rounded-bl-[40px] font-bold text-xl shadow-lg">
+            About Me
+          </div>
+        </div>
+
+        {/* About Text */}
+        <div className="text-center mb-8">
+          <p className="text-white text-sm sm:text-base leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+          </p>
+        </div>
+
+        {/* Pink Call Me Button */}
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center bg-pink-500 text-white px-6 py-3 rounded-tr-[40px] rounded-bl-[40px] font-bold text-lg shadow-lg">
+            <FaMobileAlt className="w-6 h-6 mr-3" />
+            Call Me
+          </div>
+        </div>
+
+        {/* Contact Information */}
+        <div className="space-y-6 mb-8 text-center">
+          {/* Call Me */}
+          <div>
+            <h3 className="text-xl sm:text-2xl font-bold text-pink-500 mb-2">
+              Call Me
+            </h3>
+            <p className="text-white text-lg">05064152216</p>
+          </div>
+
+          {/* Email */}
+          <div>
+            <h3 className="text-xl sm:text-2xl font-bold text-pink-500 mb-2">
+              Email
+            </h3>
+            <p className="text-white text-lg break-all">example@email.com</p>
+          </div>
+        </div>
+
+        {/* Pink Links Section */}
+        <div className="space-y-4">
+          <div className="bg-pink-500 rounded-tr-[40px] rounded-bl-[40px] py-4 px-6 flex items-center shadow-lg">
+            <FaLink className="w-5 h-5 text-white mr-3 flex-shrink-0" />
+            <a
+              href="https://www.examplelink.com"
+              className="text-white text-sm font-medium truncate"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://www.examplelink.com
+            </a>
+          </div>
+          <div className="bg-pink-500 rounded-tr-[40px] rounded-bl-[40px] py-4 px-6 flex items-center shadow-lg">
+            <FaLink className="w-5 h-5 text-white mr-3 flex-shrink-0" />
+            <a
+              href="https://www.examplelink.com"
+              className="text-white text-sm font-medium truncate"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://www.examplelink.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Theme19;

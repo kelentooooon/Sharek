@@ -1,118 +1,174 @@
 import React from "react";
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaLink } from "react-icons/fa";
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaLink, FaStar, FaFacebook, FaTwitter, FaInstagram, FaClock } from "react-icons/fa";
 import profileimg from "../assets/width_304.jpeg";
-
-import bgImage from '../assets/bgfortheme2.jpg';
+import shareLogo from "../assets/BlackLogo.png";
 
 const Theme20 = () => {
-    return (
-        <div className="min-h-screen flex justify-center items-center font-sans">
-            <div className="w-full max-w-sm bg-black">
-                <div className="relative mb-16">
-                    <div className="w-full h-66 sm:h-76 overflow-hidden bg-gray-600">
-                        <img
-                            src={bgImage}
-                            alt="background Image"
-                            className="w-full h-full object-cover"
-                        />
-                        <div className="absolute inset-0 bg-black"
-                            style={{ clipPath: 'polygon(0px 35%, 220% 100%, 100% 71%, 0% 71%)' }}
-                        ></div>
-                    </div>
-                    <div className="absolute bottom-17 left-1/2 transform -translate-1/2 rounded-full overflow-hidden">
-                        <img src={profileimg} alt="profile" className="w-30 sm:w-40 h-30 sm:h-40 rounded-full mx-auto object-cover" />
-                    </div>
-                    <div className="p-4 pt-0 text-white text-center">
-                        <div className="-space-y-3">
-                            <h2 className="text-2xl sm:text-3xl leading-tight">Ahmed</h2>
-                            <h2 className="text-2xl sm:text-3xl font-bold leading-tight">Mohamed</h2>
-                        </div>
-
-                    <p className="font-bold text-sm sm:text-base bg-white text-[#3F3F3F] w-fit mx-auto px-2 font-mediumbg-opacity-50">
-                            title
-                        </p>
-                        <p className="font-medium text-sm sm:text-base mt-1">
-                            Company
-                        </p>
-                    </div>
-                </div>
-                <div className="mb-8">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 text-center">
-                        About Me
-                    </h2>
-                    <p className="text-gray-400 text-sm sm:text-base leading-relaxed text-center mb-6">
-                        Description
-                    </p>
-                    <div className="w-20 h-0.5 bg-white mx-auto"></div>
-                </div>
-                <div className="mb-8">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8 text-center">
-                        Contact Me
-                    </h2>
-
-                    <div className="space-y-8 px-6 text-left">
-                        <div>
-                            <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
-                                Call Me
-                            </h3>
-                            <p className="text-gray-400 text-base sm:text-lg">05064152216</p>
-                        </div>
-                        <div>
-                            <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
-                                Email
-                            </h3>
-                            <p className="text-gray-400 text-base sm:text-lg break-all">
-                                example@email.com
-                            </p>
-                        </div>
-                        <div>
-                            <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
-                                Address
-                            </h3>
-                            <div className="text-gray-400 text-base sm:text-lg space-y-1">
-                                <p>street</p>
-                                <p>City, State, Zipcode</p>
-                                <p>Country</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="w-20 h-0.5 bg-white mx-auto mt-8"></div>
-                </div>
-                <div className="pb-8">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8 text-center">
-                        Links
-                    </h2>
-
-                    <div className="space-y-6 px-6">
-                        <div className="flex items-center group">
-                            <FaLink className="text-white mr-4 text-xl group-hover:text-red-400 transition-colors duration-200" />
-                            <a
-                                href="https://www.examplelink.com"
-                                className="text-white hover:text-red-400 transition-colors duration-200 text-base sm:text-lg break-all"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                https://www.examplelink.com
-                            </a>
-                        </div>
-
-                        <div className="flex items-center group">
-                            <FaLink className="text-white mr-4 text-xl group-hover:text-red-400 transition-colors duration-200" />
-                            <a
-                                href="#"
-                                className="text-white hover:text-red-400 transition-colors duration-200 text-base sm:text-lg"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Another Link
-                            </a>
-                        </div>
-                    </div>
-                </div>
+  return (
+    <div className="min-h-screen bg-gray-100 flex justify-center items-center p-4 font-sans">
+      <div className="w-full max-w-sm space-y-4">
+        {/* Header Card with Profile */}
+        <div className="bg-indigo-600 rounded-3xl p-6 text-white shadow-2xl">
+          {/* Logo */}
+          <div className="flex justify-start mb-4">
+            <img
+              src={shareLogo}
+              alt="Sharek Logo"
+              className="w-16 h-10 object-contain filter invert"
+            />
+          </div>
+          
+          {/* Profile Image */}
+          <div className="flex justify-center mb-4">
+            <div className="w-32 h-40 rounded-2xl overflow-hidden shadow-lg bg-gray-600">
+              <img
+                src={profileimg}
+                alt="Profile"
+                className="w-full h-full object-cover"
+              />
             </div>
+          </div>
+
+          {/* Name and Title */}
+          <div className="text-center">
+            <h1 className="text-2xl sm:text-3xl font-bold mb-1">
+              Ahmed Mohamed
+            </h1>
+            <p className="text-indigo-200 text-base mb-1">title</p>
+            <p className="text-indigo-200 text-base">Company</p>
+          </div>
         </div>
-    );
+
+        {/* White Contact Icons */}
+        <div className="flex justify-center space-x-6 py-4">
+          <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-lg">
+            <FaPhone className="w-6 h-6 text-indigo-600" />
+          </div>
+          <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-lg">
+            <FaEnvelope className="w-6 h-6 text-indigo-600" />
+          </div>
+          <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-lg">
+            <FaMapMarkerAlt className="w-6 h-6 text-indigo-600" />
+          </div>
+        </div>
+
+        {/* About Me Section */}
+        <div className="bg-indigo-600 rounded-3xl p-6 text-white shadow-2xl">
+          <div className="text-center mb-4">
+            <div className="inline-block bg-indigo-800 text-white text-3xl px-6 py-2 rounded-2xl font-semibold">
+              About Me
+            </div>
+          </div>
+          <p className="text-center text-sm leading-relaxed mb-6">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+          </p>
+
+          {/* Call Me Button */}
+          <div className="text-center mb-6">
+            <div className="inline-flex items-center bg-indigo-800 text-3xl px-6 py-3 rounded-2xl font-semibold">
+              Call Me
+              <FaPhone className="w-4 h-4 mr-2" />
+            </div>
+          </div>
+
+          {/* Contact Info */}
+          <div className="text-end mx-auto space-y-3 w-1/2">
+            <p className="text-lg font-semibold  text-black">Call Me</p>
+            <p className="text-lg font-semibold">05064152216</p>
+            <p className="text-lg font-semibold  text-black">Email</p>
+            <p className="text-lg font-semibold">example@email.com</p>
+          </div>
+
+          {/* Links */}
+          <div className="space-y-3 mt-6">
+            <div className="bg-indigo-800 rounded-2xl py-3 px-4 flex items-center">
+              <FaLink className="w-4 h-4 mr-3 flex-shrink-0" />
+              <a
+                href="https://www.examplelink.com"
+                className="text-white text-sm truncate"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://www.examplelink.com
+              </a>
+            </div>
+            <div className="bg-indigo-800 rounded-2xl py-3 px-4 flex items-center">
+              <FaLink className="w-4 h-4 mr-3 flex-shrink-0" />
+              <a
+                href="https://www.examplelink.com"
+                className="text-white text-sm truncate"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://www.examplelink.com
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Social Media Icons */}
+        <div className="flex justify-center space-x-4 py-2">
+          <div className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center">
+            <FaFacebook className="w-5 h-5 text-white" />
+          </div>
+          <div className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center">
+            <FaTwitter className="w-5 h-5 text-white" />
+          </div>
+          <div className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center">
+            <FaInstagram className="w-5 h-5 text-white" />
+          </div>
+        </div>
+
+        {/* Rate Me Section */}
+        <div className="text-center py-2">
+          <p className="text-gray-600 text-sm mb-2">rate me</p>
+          <div className="flex justify-center space-x-1">
+            <FaStar className="w-6 h-6 text-yellow-400" />
+            <FaStar className="w-6 h-6 text-yellow-400" />
+            <FaStar className="w-6 h-6 text-yellow-400" />
+            <FaStar className="w-6 h-6 text-yellow-400" />
+            <FaStar className="w-6 h-6 text-yellow-400" />
+          </div>
+        </div>
+
+        {/* Opening Hours */}
+        <div className="bg-indigo-600 rounded-2xl p-4 text-white shadow-lg">
+          <div className="text-center mb-3">
+            <h3 className="font-semibold text-lg">Opening Hours</h3>
+          </div>
+          <div className="space-y-2">
+            <div className="flex justify-between items-center bg-white text-black bg-opacity-10 rounded-lg p-2">
+              <span className="text-sm">Monday</span>
+              <span className="text-sm">1:00 AM - 2:00 AM</span>
+            </div>
+            <div className="flex justify-between items-center bg-white text-black bg-opacity-10 rounded-lg p-2">
+              <span className="text-sm">Monday</span>
+              <span className="text-sm">1:00 AM - 2:00 AM</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Business Images */}
+        <div className="space-y-3">
+          <div className="w-full h-32 bg-gray-300 rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src={profileimg}
+              alt="Business"
+              className="w-full h-full object-cover opacity-70"
+            />
+          </div>
+          <div className="w-full h-32 bg-gray-300 rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src={profileimg}
+              alt="Business"
+              className="w-full h-full object-cover opacity-70"
+            />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  );
 };
 
 export default Theme20;

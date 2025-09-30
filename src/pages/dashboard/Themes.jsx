@@ -23,13 +23,6 @@ import Theme17 from "../../themes/Theme17";
 import Theme18 from "../../themes/Theme18";
 import Theme19 from "../../themes/Theme19";
 import Theme20 from "../../themes/Theme20";
-import Theme21 from "../../themes/Theme21";
-import Theme22 from "../../themes/Theme22";
-import Theme23 from "../../themes/Theme23";
-import Theme24 from "../../themes/Theme24";
-import Theme25 from "../../themes/Theme25";
-import Theme26 from "../../themes/Theme26";
-import Theme27 from "../../themes/Theme27";
 
 const TestTemes = () => {
   const [selectedTheme, setSelectedTheme] = useState("Theme1");
@@ -57,13 +50,6 @@ const TestTemes = () => {
     Theme18: Theme18,
     Theme19: Theme19,
     Theme20: Theme20,
-    Theme21: Theme21,
-    Theme22: Theme22,
-    Theme23: Theme23,
-    Theme24: Theme24,
-    Theme25: Theme25,
-    Theme26: Theme26,
-    Theme27: Theme27,
   };
 
   // Theme metadata for better presentation
@@ -84,121 +70,86 @@ const TestTemes = () => {
       color: "from-blue-50 to-indigo-100",
     },
     Theme4: {
-      name: "قالب ملون",
-      description: "تصميم مفعم بالألوان",
-      color: "from-purple-50 to-pink-100",
-    },
-    Theme5: {
-      name: "قالب بسيط",
-      description: "تصميم مينيمال",
-      color: "from-gray-50 to-gray-100",
-    },
-    Theme6: {
       name: "قالب ناعم",
       description: "ألوان هادئة",
       color: "from-green-50 to-teal-100",
     },
-    Theme7: {
+    Theme5: {
       name: "قالب دافئ",
       description: "ألوان دافئة",
       color: "from-orange-50 to-red-100",
     },
-    Theme8: {
+    Theme6: {
       name: "قالب بارد",
       description: "ألوان باردة",
       color: "from-cyan-50 to-blue-100",
     },
-    Theme9: {
-      name: "قالب متدرج",
-      description: "تدرجات جميلة",
-      color: "from-violet-50 to-purple-100",
-    },
-    Theme10: {
+    Theme7: {
       name: "قالب عملي",
       description: "للاستخدام اليومي",
       color: "from-amber-50 to-yellow-100",
     },
-    Theme11: {
+    Theme8: {
       name: "قالب أنيق",
       description: "تصميم راقي",
       color: "from-rose-50 to-pink-100",
     },
-    Theme12: {
+    Theme9: {
       name: "قالب حديث",
       description: "مواكب للعصر",
       color: "from-emerald-50 to-green-100",
     },
-    Theme13: {
+    Theme10: {
       name: "قالب مبتكر",
       description: "تصميم إبداعي",
       color: "from-sky-50 to-cyan-100",
     },
-    Theme14: {
+    Theme11: {
       name: "قالب مميز",
       description: "يلفت الأنظار",
       color: "from-indigo-50 to-blue-100",
     },
-    Theme15: {
+    Theme12: {
       name: "قالب فاخر",
       description: "للمناسبات الخاصة",
       color: "from-purple-50 to-violet-100",
     },
-    Theme16: {
-      name: "قالب عملي",
-      description: "سهل الاستخدام",
-      color: "from-teal-50 to-cyan-100",
-    },
-    Theme17: {
+    Theme13: {
       name: "قالب جذاب",
       description: "تصميم لافت",
       color: "from-pink-50 to-rose-100",
     },
-    Theme18: {
-      name: "قالب متوازن",
-      description: "تناسق مثالي",
-      color: "from-lime-50 to-green-100",
-    },
-    Theme19: {
-      name: "قالب متطور",
-      description: "تقنية حديثة",
-      color: "from-fuchsia-50 to-purple-100",
-    },
-    Theme20: {
-      name: "قالب مرن",
-      description: "يتكيف مع كل الأذواق",
-      color: "from-slate-50 to-stone-100",
-    },
-    Theme21: {
+    Theme14: {
       name: "قالب شارك الأزرق",
       description: "تصميم شارك المميز",
       color: "from-gray-100 to-blue-600",
     },
-    Theme22: {
+    Theme15: {
       name: "قالب جالاكسي",
       description: "تصميم مستقبلي بالتدرجات",
       color: "from-purple-900 to-blue-900",
     },
-    Theme23: {
+    Theme16: {
       name: "قالب شارك الأخضر",
       description: "تصميم أخضر منعش",
       color: "from-green-50 to-green-500",
     },
-    Theme24: {
+    Theme17: {
       name: "قالب سايان",
       description: "تصميم أسود وفيروزي",
       color: "from-black to-cyan-500",
     },
-    Theme25: {
+    Theme18: {
       name: "قالب ليموني",
       description: "تصميم رمادي وليموني",
       color: "from-gray-800 to-lime-400",
     },
-    Theme26: {
+    Theme19: {
       name: "قالب وردي",
       description: "تصميم أسود ووردي",
       color: "from-black to-pink-500",
     },
-    Theme27: {
+    Theme20: {
       name: "قالب الأعمال",
       description: "قالب شامل للأعمال",
       color: "from-indigo-600 to-indigo-800",

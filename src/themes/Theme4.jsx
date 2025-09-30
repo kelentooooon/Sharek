@@ -1,105 +1,112 @@
 import React from "react";
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaLink } from "react-icons/fa";
+import {
+  FaPhone,
+  FaEnvelope,
+  FaComments,
+  FaMapMarkerAlt,
+  FaLink,
+  FaGlobe,
+} from "react-icons/fa";
 import profileimg from "../assets/width_304.jpeg";
-
+import shareLogo from "../assets/BlueLogo.png";
 
 const Theme4 = () => {
   return (
-    <div className="min-h-screen bg-black flex justify-center items-center p-4 sm:p-6 lg:p-8">
-      <div className="w-full max-w-sm space-y-6">
-        <div className="text-center">
-          <div className="w-32 h-32 sm:w-36 sm:h-36 mx-auto mb-6 relative">
-            <div className="w-full h-full rounded-full p-1 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600">
-              <div className="w-full h-full rounded-full overflow-hidden">
+    <div className="min-h-screen bg-gray-100 flex justify-center items-center p-4 font-sans">
+      <div className="w-full max-w-sm bg-blue-500 rounded-3xl overflow-hidden shadow-2xl">
+        <div className="rounded-b-3xl overflow-hidden">
+          {/* Header with Logo */}
+          <div className="bg-white px-6 pt-6 pb-4 text-center">
+            <div className="flex justify-center items-center">
+              <img
+                src={shareLogo}
+                alt="Sharek Logo"
+                className="w-30 h-20 object-contain"
+              />
+            </div>
+          </div>
+
+          {/* Profile Section */}
+          <div className="bg-white px-6 pb-6 text-center">
+            {/* Profile Image */}
+            <div className="relative mb-6">
+              <div className="w-40 h-48 mx-auto rounded-2xl overflow-hidden bg-gray-200 shadow-lg">
                 <img
                   src={profileimg}
-                  alt="Profile"
+                  alt="Ahmed Mohamed"
                   className="w-full h-full object-cover"
                 />
               </div>
             </div>
-          </div>
-          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2">
-            Ahmed Mohamed
-          </h1>
-          <p className="text-gray-400 text-base sm:text-lg mb-1">title</p>
-          <p className="text-gray-400 text-base sm:text-lg">Company</p>
-        </div>
-        <div className="border border-yellow-500 rounded-3xl p-6 sm:p-8 bg-black bg-opacity-50">
-          <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 text-center">
-            About Me
-          </h2>
-          <div className="w-12 h-0.5 bg-white mx-auto mb-6"></div>
-          <p className="text-gray-400 text-sm sm:text-base leading-relaxed text-center">
-            Description
-          </p>
-        </div>
-        <div className="border border-yellow-500 rounded-3xl p-6 sm:p-8 bg-black bg-opacity-50">
-          <h2 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center">
-            Contact Me
-          </h2>
-          <div className="w-16 h-0.5 bg-white mx-auto mb-8"></div>
 
-          <div className="space-y-6 text-left">
-            <div>
-              <h3 className="text-lg font-bold text-white mb-2 flex items-center">
-                <FaPhone className="mr-3 text-white text-base" />
-                Call Me
-              </h3>
-              <p className="text-gray-400 text-sm sm:text-base ml-7">
-                05064152216
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold text-white mb-2 flex items-center">
-                <FaEnvelope className="mr-3 text-white text-base" />
-                Email
-              </h3>
-              <p className="text-gray-400 text-sm sm:text-base ml-7 break-all">
-                example@email.com
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold text-white mb-2 flex items-center">
-                <FaMapMarkerAlt className="mr-3 text-white text-base" />
-                Address
-              </h3>
-              <div className="ml-7 text-gray-400 text-sm sm:text-base space-y-1">
-                <p>street</p>
-                <p>City, State, Zipcode</p>
-                <p>Country</p>
-              </div>
-            </div>
+            {/* Name and Title */}
+            <h2 className="text-3xl font-bold text-blue-600 mb-1">Ahmed</h2>
+            <h2 className="text-3xl font-bold text-blue-600 mb-3">Mohamed</h2>
+            <p className="text-gray-600 text-lg mb-6">Company</p>
           </div>
         </div>
-        <div className="border border-yellow-500 rounded-3xl p-6 sm:p-8 bg-black bg-opacity-50">
-          <h2 className="text-xl sm:text-2xl font-bold text-white mb-8 text-center">
-            Links
-          </h2>
 
+        {/* Blue Section */}
+        <div className="bg-gradient-to-b from-blue-500 to-blue-700 px-6 py-8 text-white">
+          {/* Contact Icons Row */}
+          <div className="flex justify-center space-x-6 mb-8">
+            <div className="bg-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 cursor-pointer group">
+              <FaPhone className="w-6 h-6 text-blue-600 group-hover:scale-110 transition-transform duration-200" />
+            </div>
+            <div className="bg-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 cursor-pointer group">
+              <FaEnvelope className="w-6 h-6 text-blue-600 group-hover:scale-110 transition-transform duration-200" />
+            </div>
+            <div className="bg-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 cursor-pointer group">
+              <FaComments className="w-6 h-6 text-blue-600 group-hover:scale-110 transition-transform duration-200" />
+            </div>
+            <div className="bg-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 cursor-pointer group">
+              <FaMapMarkerAlt className="w-6 h-6 text-blue-600 group-hover:scale-110 transition-transform duration-200" />
+            </div>
+          </div>
+
+          {/* About Me Section */}
+          <div className="mb-8">
+            <h3 className="text-2xl font-bold text-center mb-4">About Me</h3>
+            <p className="text-blue-100 text-base leading-relaxed text-center px-2">
+              Description
+            </p>
+          </div>
+
+          {/* Contact Information */}
+          <div className="space-y-6 mb-8">
+            {/* Phone */}
+            <div className="text-center">
+              <h4 className="text-xl font-bold mb-2">Call Me</h4>
+              <p className="text-blue-100 text-lg">05064152216</p>
+            </div>
+
+            {/* Email */}
+            <div className="text-center">
+              <h4 className="text-xl font-bold mb-2">Email</h4>
+              <p className="text-blue-100 text-lg">example@email.com</p>
+            </div>
+
+            {/* Address */}
+            <div className="text-center">
+              <p className="text-blue-100 text-base">street</p>
+              <p className="text-blue-100 text-base">City, State, Zipcode</p>
+              <p className="text-blue-100 text-base">Country</p>
+            </div>
+          </div>
+
+          {/* Website Links */}
           <div className="space-y-4">
-            <div className="flex items-center group">
-              <FaLink className="text-white mr-4 text-lg group-hover:text-yellow-400 transition-colors duration-200" />
-              <a
-                href="https://www.examplelink.com"
-                className="text-white hover:text-yellow-400 transition-colors duration-200 text-sm sm:text-base break-all"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+            <div className="bg-white bg-opacity-95 rounded-full py-4 px-6 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-200 cursor-pointer">
+              <FaLink className="w-5 h-5 text-blue-600 mr-3 flex-shrink-0" />
+              <span className="text-blue-800 text-sm font-medium truncate">
                 https://www.examplelink.com
-              </a>
+              </span>
             </div>
-
-            <div className="flex items-center group">
-              <FaLink className="text-white mr-4 text-lg group-hover:text-yellow-400 transition-colors duration-200" />
-              <a
-                href="#"
-                className="text-white hover:text-yellow-400 transition-colors duration-200 text-sm sm:text-base"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Another Link
-              </a>
+            <div className="bg-white bg-opacity-95 rounded-full py-4 px-6 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-200 cursor-pointer">
+              <FaGlobe className="w-5 h-5 text-blue-600 mr-3 flex-shrink-0" />
+              <span className="text-blue-800 text-sm font-medium truncate">
+                https://www.examplelink.com
+              </span>
             </div>
           </div>
         </div>

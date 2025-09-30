@@ -14,7 +14,7 @@ import Customers from './pages/dashboard/Customers';
 import Cards from './pages/dashboard/Cards';
 import Settings from './pages/dashboard/Settings';
 import TestTemes from './pages/dashboard/Themes';
-import Theme from './themes/Theme27';
+import Theme from './themes/Theme20';
 
 function App() {
 

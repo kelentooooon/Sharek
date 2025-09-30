@@ -23,8 +23,7 @@ import Theme7 from '../themes/Theme7';
 import Theme8 from '../themes/Theme8';
 import Theme9 from '../themes/Theme9';
 import Theme10 from '../themes/Theme10';
-import Theme21 from '../themes/Theme21';
-import Theme22 from '../themes/Theme21';
+
 
 const CreateCard = () => {
   const navigate = useNavigate();
@@ -43,8 +42,6 @@ const CreateCard = () => {
     { component: Theme8, name: 'التصميم البارد', description: 'ألوان باردة' },
     { component: Theme9, name: 'التصميم المتدرج', description: 'تدرجات جميلة' },
     { component: Theme10, name: 'التصميم المتميز', description: 'فريد ومبتكر' },
-    { component: Theme21, name: 'تصميم شارك الأزرق', description: 'تصميم شارك المميز' },
-    { component: Theme22, name: 'تصميم شارك الاحترافي', description: 'نسخة احترافية من شارك' },
   ];
 
   return (
@@ -73,7 +70,7 @@ const CreateCard = () => {
       </div>
 
         {/* Themes Section */}
-        <div className="py-16 bg-gray-50 relative -top-70">
+        <div className="bg-gray-50 relative -top-70">
           {/* Swiper Theme Slider */}
           <div className="relative max-w-7xl mx-auto px-4">
             <Swiper

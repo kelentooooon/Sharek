@@ -4,14 +4,13 @@ import nfcCard from "../assets/card.png";
 import nfcSticker from "../assets/sticker.png";
 import nfcStand from "../assets/stand.png";
 import Scan from "../assets/output.webm";
-import {
-  FaQrcode,
-  FaWifi,
-  FaMobileAlt,
-  FaUserTie,
-  FaBolt,
-  FaGem,
-} from "react-icons/fa";
+import aboutPhone from "../assets/aboutphone.png";
+import NFCIcon from "../assets/NFCIcon.svg";
+import QrCodeIcon from "../assets/QrCodeIcon.svg";
+import IOSAndroidIcon from "../assets/IOSAndroidIcon.svg";
+import ThinkingIcon from "../assets/ThinkingIcon.svg";
+import ProfileIcon from "../assets/ProfileIcon.svg";
+import BoxsIcon from "../assets/BoxsIcon.svg";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -47,7 +46,7 @@ const Home = () => {
               </div>
             </div>
             {/* NFC Stand */}
-            <div className="pt-[13px]">
+            <div className="lg:pt-[10px] md:pt-[11px]">
               <div>
                 <img
                   className="relative top-25 "
@@ -122,7 +121,7 @@ const Home = () => {
               <div className="features-grid">
                 <div className="feature-item">
                   <div className="feature-icon">
-                    <FaWifi />
+                    <img src={NFCIcon} alt="NFC Icon" className="w-13 h-13" />
                   </div>
                   <div className="feature-content">
                     <h3>تقنية NFC</h3>
@@ -137,7 +136,7 @@ const Home = () => {
 
                 <div className="feature-item">
                   <div className="feature-icon">
-                    <FaQrcode />
+                    <img src={QrCodeIcon} alt="QR Code Icon" className="w-13 h-13" />
                   </div>
                   <div className="feature-content">
                     <h3>قراءة QR</h3>
@@ -151,7 +150,7 @@ const Home = () => {
 
                 <div className="feature-item">
                   <div className="feature-icon">
-                    <FaMobileAlt />
+                    <img src={IOSAndroidIcon} alt="iOS Android Icon" className="w-13 h-13" />
                   </div>
                   <div className="feature-content">
                     <h3>iOS & Android</h3>
@@ -165,7 +164,7 @@ const Home = () => {
 
                 <div className="feature-item">
                   <div className="feature-icon">
-                    <FaBolt />
+                    <img src={BoxsIcon} alt="Unique Design Icon" className="w-13 h-13" />
                   </div>
                   <div className="feature-content">
                     <h3>لا يحتاج تطبيق</h3>
@@ -178,7 +177,7 @@ const Home = () => {
 
                 <div className="feature-item">
                   <div className="feature-icon">
-                    <FaUserTie />
+                    <img src={ProfileIcon} alt="Digital Profile Icon" className="w-13 h-13" />
                   </div>
                   <div className="feature-content">
                     <h3>بروفايل رقمي</h3>
@@ -192,7 +191,7 @@ const Home = () => {
 
                 <div className="feature-item">
                   <div className="feature-icon">
-                    <FaGem />
+                    <img src={ThinkingIcon} alt="No App Required Icon" className="w-13 h-13" />
                   </div>
                   <div className="feature-content">
                     <h3>تصميم فريد</h3>
@@ -202,6 +201,32 @@ const Home = () => {
                     </p>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Phone Section */}
+      <section className="pt-12 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
+            <div className="text-left ">
+              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                نوفر لك منتجات مبتكرة تعتمد على تقنية NFC "اتصال المدى القريب"
+                نحن شارك ديجيتال، نصنع مستقبل التواصل لتجعل تواصلك مع العالم من
+                حولك أسرع وأسهل من أي وقت مضى.
+              </p>
+            </div>
+            {/* Phone Image */}
+            <div className="lg:relative flex justify-center lg:justify-around">
+              <div className="lg:absolute bottom-57 h-full">
+                <img
+                  src={aboutPhone}
+                  alt="About Phone"
+                  className="max-w-full h-auto max-h-[600px] object-contain"
+                />
               </div>
             </div>
           </div>
