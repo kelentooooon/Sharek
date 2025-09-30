@@ -3,6 +3,7 @@ import "./Home.css";
 import nfcCard from "../assets/card.png";
 import nfcSticker from "../assets/sticker.png";
 import nfcStand from "../assets/stand.png";
+import Scan from "../assets/output.webm";
 import {
   FaQrcode,
   FaWifi,
@@ -16,7 +17,6 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="home">
-
       {/* Products Section */}
       <section className="pb-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
@@ -31,7 +31,9 @@ const Home = () => {
                 />
               </div>
               <div className="flex flex-col gap-2 text-center border p-6 border-amber-50 pt-25 rounded-lg bg-white shadow-2xl shadow-gray-400 ">
-                <Link to="/create-card" className="text-2xl font-semibold text-white border border-blue-500 bg-blue-500 hover:bg-blue-800 transition-all duration-300 px-6 mx-auto mb-3 rounded-xl"
+                <Link
+                  to="/create-card"
+                  className="text-2xl font-semibold text-white border border-blue-500 bg-blue-500 hover:bg-blue-800 transition-all duration-300 px-6 mx-auto mb-3 rounded-xl"
                   aria-label="إنشاء بطاقة NFC"
                 >
                   كارت NFC
@@ -45,10 +47,10 @@ const Home = () => {
               </div>
             </div>
             {/* NFC Stand */}
-            <div>
+            <div className="pt-[13px]">
               <div>
                 <img
-                  className="relative top-25"
+                  className="relative top-25 "
                   src={nfcStand}
                   alt="NFC Stand"
                 />
@@ -69,7 +71,6 @@ const Home = () => {
                 </p>
               </div>
             </div>
-
             {/* NFC Sticker */}
             <div>
               <div>
@@ -80,7 +81,9 @@ const Home = () => {
                 />
               </div>
               <div className="flex flex-col gap-2  text-center border p-6 border-amber-50 pt-25 rounded-lg bg-white shadow-2xl shadow-gray-400 ">
-                <Link to='/create-card' className="text-2xl font-semibold text-white border border-blue-500 bg-blue-500 hover:bg-blue-800 transition-all duration-300 px-6 mx-auto mb-3 rounded-xl"
+                <Link
+                  to="/create-card"
+                  className="text-2xl font-semibold text-white border border-blue-500 bg-blue-500 hover:bg-blue-800 transition-all duration-300 px-6 mx-auto mb-3 rounded-xl"
                   aria-label="إنشاء بطاقة NFC"
                 >
                   NFC ستاند
@@ -98,14 +101,24 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section
-        className="features bg-gradient-to-b from-sky-600 to-sky-700"
-
-      >
+      <section className="features bg-gradient-to-b from-sky-600 to-sky-700 ">
+        <div className="absolute flex justify-around mb-8 w-full -top-1/5 xl:-top-11/12 lg:-top-8/12 md:-top-5/12 ">
+          <video autoPlay loop muted className="w-full md:w-1/2 h-1/4 ">
+            <source src={Scan} type="video/webm" />
+          </video>
+        </div>
         <div className="container">
           <div className="features-content">
             <div className="features-text">
-
+              <h2 className="text-6xl font-bold text-white mb-4 text-end">
+                معلومات عنا
+              </h2>
+              <p className="text-lg text-white mb-12 max-w-2xl text-end mr-auto ">
+                اكتشف لماذا تعتبر منتجات شارك الخيار الأمثل لاحتياجاتك في
+                التواصل الرقمي. نقدم لك مجموعة من الميزات الفريدة التي تجعل
+                تجربتك معنا لا مثيل لها. التواصل الرقمي. نقدم لك مجموعة من
+                الميزات الفريدة التي تجعل تجربتك معنا لا مثيل لها.
+              </p>
               <div className="features-grid">
                 <div className="feature-item">
                   <div className="feature-icon">
@@ -171,8 +184,8 @@ const Home = () => {
                     <h3>بروفايل رقمي</h3>
                     <p>
                       شارك يوفر لك خدمة - في معلومات العميل الشامل الأجهزة
-                      الوصول المباشر. بطاقة شركة واحدة. مة - في معلومات العميل الشامل الأجهزة
-                      الوصول المباشر. بطاقة شركة واحدة.
+                      الوصول المباشر. بطاقة شركة واحدة. مة - في معلومات العميل
+                      الشامل الأجهزة الوصول المباشر. بطاقة شركة واحدة.
                     </p>
                   </div>
                 </div>
@@ -194,7 +207,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
     </div>
   );
 };

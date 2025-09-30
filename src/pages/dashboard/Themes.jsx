@@ -23,6 +23,8 @@ import Theme17 from '../../themes/Theme17';
 import Theme18 from '../../themes/Theme18';
 import Theme19 from '../../themes/Theme19';
 import Theme20 from '../../themes/Theme20';
+import Theme21 from '../../themes/Theme21';
+
 
 const TestTemes = () => {
   const [selectedTheme, setSelectedTheme] = useState('Theme1');
@@ -50,6 +52,8 @@ const TestTemes = () => {
     Theme18: Theme18,
     Theme19: Theme19,
     Theme20: Theme20,
+    Theme21: Theme21,
+
   };
 
   // Theme metadata for better presentation
@@ -74,6 +78,8 @@ const TestTemes = () => {
     Theme18: { name: 'قالب متوازن', description: 'تناسق مثالي', color: 'from-lime-50 to-green-100' },
     Theme19: { name: 'قالب متطور', description: 'تقنية حديثة', color: 'from-fuchsia-50 to-purple-100' },
     Theme20: { name: 'قالب مرن', description: 'يتكيف مع كل الأذواق', color: 'from-slate-50 to-stone-100' },
+    Theme21: { name: 'قالب شارك الأزرق', description: 'تصميم شارك المميز', color: 'from-gray-100 to-blue-600' },
+    Theme22: { name: 'قالب شارك الاحترافي', description: 'نسخة احترافية من شارك', color: 'from-blue-50 to-blue-700' },
   };
 
   const SelectedThemeComponent = themeComponents[selectedTheme];
