@@ -15,6 +15,7 @@ import Cards from './pages/dashboard/Cards';
 import Settings from './pages/dashboard/Settings';
 import TestTemes from './pages/dashboard/Themes';
 import Theme from './themes/Theme20';
+import Theme1 from './themes/Theme1';
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/create-card' element={<CreateCard />} />
           <Route path='/digital-business-cards' element={<CreateBusinessCard />} />
+          <Route path='/theme' element={<Theme1 />} />
         </Route>
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
