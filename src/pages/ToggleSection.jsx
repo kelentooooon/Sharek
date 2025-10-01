@@ -424,7 +424,7 @@ const ToggleSection = () => {
                 <div className="bg-white p-6 border-t border-gray-200 rounded-b-2xl">
                     <div className="space-y-4">
                         <div className="flex items-center gap-4">
-                            <label className="text-md font-medium text-gray-600">أيقونات التواصل</label>
+                            <label className="text-md font-medium text-gray-400 mb-2 flex gap-5 items-center">أيقونات التواصل
                             <label className="relative inline-flex items-center cursor-pointer">
                                 <input
                                     type="checkbox"
@@ -433,8 +433,9 @@ const ToggleSection = () => {
                                     className="sr-only peer"
                                     aria-label="Toggle communication icons"
                                 />
-                                <div className="w-11 h-5 bg-gray-400 rounded-full peer peer-checked:bg-[#1D79CF] transition-all duration-300"></div>
-                                <div className="absolute left-1 top-0.5 bg-white w-4 h-4 rounded-full transition-all duration-300 peer-checked:translate-x-6"></div>
+                                <div className="w-11 h-5 bg-gray-600 rounded-full peer peer-checked:bg-[#1D79CF] transition-all duration-300"></div>
+                                <div className="absolute left-1 top-1.1 bg-white w-4 h-4 rounded-full transition-all duration-300 peer-checked:translate-x-5"></div>
+                            </label>
                             </label>
                         </div>
                         {toggleStates.communicationIcons && (

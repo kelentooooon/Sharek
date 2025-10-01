@@ -53,24 +53,23 @@ const CreateCard = () => {
         <button 
           type="button"
           onClick={() => navigate('/digital-business-cards')}
-          className="px-12 py-4 rounded-full text-white text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-          style={{backgroundColor: 'var(--color-primary-green)'}}
+          className="px-12 py-4 rounded-full text-white bg-[var(--color-primary-green)] text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-[var(--color-light-green)]"
         >
           إنشاء
         </button>
       </div>
 
       {/* Cards Section */}
-      <div className="text-center mb-16">
-        <div className="relative inline-block mb-8 w100 -top-40">
-          <video autoPlay loop muted className=" h-auto">
+      <div className="text-center">
+        <div className="inline-block h-screen w-4/5">
+          <video autoPlay loop muted className="w-full h-full object-contain">
             <source src={TwoCard} type="video/webm" />
           </video>
         </div>
       </div>
 
         {/* Themes Section */}
-        <div className="bg-gray-50 relative -top-70">
+        <div className="bg-gray-50 relative">
           {/* Swiper Theme Slider */}
           <div className="relative max-w-7xl mx-auto px-4">
             <Swiper

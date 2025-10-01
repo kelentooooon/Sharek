@@ -24,6 +24,7 @@ function App() {
         <Route element={<Layout />}>
           <Route path='/' element={<Home />} />
           <Route path='/create-card' element={<CreateCard />} />
+          <Route path='/digital-business-cards' element={<CreateBusinessCard />} />
         </Route>
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
@@ -31,7 +32,6 @@ function App() {
           <Route path='/dashboard' element={<DashboardHome />} />
           <Route path='/dashboard/plans' element={<Plans />} />
           <Route path='/dashboard/customers' element={<Customers />} />
-          <Route path='/digital-business-cards' element={<CreateBusinessCard />} />
           <Route path='/dashboard/cards' element={<Cards />} />
           <Route path='/dashboard/settings' element={<Settings />} />
           <Route path='/dashboard/themes' element={<TestTemes />} />
