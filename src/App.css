@@ -85,3 +85,8 @@ body {
   color: var(--color-white);
 }
 
+
+input[type="color" i]::-webkit-color-swatch  {
+  border-color: transparent;
+}
+

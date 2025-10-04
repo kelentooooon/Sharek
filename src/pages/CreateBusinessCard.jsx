@@ -1,19 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import themeImg1 from "../assets/web design sharek.jpg";
 import themeImg2 from "../assets/web design sharek2.jpg";
 import { IoMdCheckmark } from "react-icons/io";
-import ToggleSection from "./ToggleSection";
+import ToggleSection from "../components/ToggleSection";
+import DesignSettings from "../components/DesignSettings";
+import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 
 const CreateBusinessCard = () => {
   const [activeButton, setActiveButton] = useState(0);
-  const [selectedTheme, setSelectedTheme] = useState(null);
+  const [selectedTheme, setSelectedTheme] = useState(1);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const contentRef = useRef(null);
 
   const buttons = [
     { id: 0, text: "التواصل" },
     { id: 1, text: "التصميم /الاعدادات" },
     { id: 2, text: "باركود" },
   ];
+
+
+  useEffect(() => {
+    if (contentRef.current) {
+      contentRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [activeButton]);
 
   // Sample theme data with placeholder images
   const themes = [
@@ -45,9 +55,15 @@ const CreateBusinessCard = () => {
     setCurrentSlide((prev) => (prev > 0 ? prev - 1 : totalSlides - 1));
   };
 
+  // Handle Next button click
+  const handleNextButton = () => {
+    if (activeButton < buttons.length - 1) {
+      setActiveButton(activeButton + 1);
+    }
+  };
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-4 w-full">
+      <div className="grid grid-cols-1 md:grid-cols-4 w-full" ref={contentRef}>
         <div className="md:col-span-3 p-4 mx-auto mt-20 w-full flex flex-col items-center">
           <div className="flex bg-[#C9DAE2] text-blue-500 w-full max-w-md mb-6 rounded-full overflow-hidden">
             {buttons.map((button, index) => (
@@ -55,21 +71,18 @@ const CreateBusinessCard = () => {
                 key={button.id}
                 className={`w-full py-4 text-base font-medium transition-all duration-300 
                                     ${index === 0 ? "rounded-r-full" : ""} 
-                                    ${
-                                      index === 1
-                                        ? "border-x border-gray-400"
-                                        : ""
-                                    }
-                                    ${
-                                      index === buttons.length - 1
-                                        ? "rounded-l-full"
-                                        : ""
-                                    }
-                                    ${
-                                      activeButton === button.id
-                                        ? "bg-blue-500 text-white shadow-md"
-                                        : "hover:bg-blue-400 hover:text-white"
-                                    }`}
+                                    ${index === 1
+                    ? "border-x border-gray-400"
+                    : ""
+                  }
+                                    ${index === buttons.length - 1
+                    ? "rounded-l-full"
+                    : ""
+                  }
+                                    ${activeButton === button.id
+                    ? "bg-blue-500 text-white shadow-md"
+                    : "hover:bg-blue-400 hover:text-white"
+                  }`}
                 onClick={() => setActiveButton(button.id)}
               >
                 {button.text}
@@ -83,11 +96,10 @@ const CreateBusinessCard = () => {
                 key={button.id}
                 onClick={() => setActiveButton(button.id)}
                 className={`h-2 w-2 rounded-full transition-all duration-300 
-                                    ${
-                                      activeButton === button.id
-                                        ? "bg-blue-500 w-4"
-                                        : "bg-gray-300 hover:bg-blue-400"
-                                    }`}
+                                    ${activeButton === button.id
+                    ? "bg-blue-500 w-4"
+                    : "bg-gray-300 hover:bg-blue-400"
+                  }`}
               ></span>
             ))}
           </div>
@@ -145,9 +157,8 @@ const CreateBusinessCard = () => {
                     <div
                       className="flex transition-transform duration-500 ease-in-out"
                       style={{
-                        transform: `translateX(${
-                          (currentSlide * 100) / totalSlides
-                        }%)`,
+                        transform: `translateX(${(currentSlide * 100) / totalSlides
+                          }%)`,
                         width: `${totalSlides * 100}%`,
                       }}
                     >
@@ -168,7 +179,7 @@ const CreateBusinessCard = () => {
                                 <div
                                   key={theme.id}
                                   className="cursor-pointer rounded-lg overflow-hidden shadow-md transition-all duration-300 relative 
-                                                     hover:shadow-lg
+                                                      hover:shadow-lg
                                                     "
                                   onClick={() => setSelectedTheme(theme.id)}
                                 >
@@ -202,29 +213,40 @@ const CreateBusinessCard = () => {
                       <button
                         key={index}
                         onClick={() => setCurrentSlide(index)}
-                        className={`h-2 rounded-full transition-all duration-300 ${
-                          currentSlide === index
-                            ? "bg-blue-500 w-6"
-                            : "bg-gray-300 w-2 hover:bg-gray-400"
-                        }`}
+                        className={`h-2 rounded-full transition-all duration-300 ${currentSlide === index
+                          ? "bg-blue-500 w-6"
+                          : "bg-gray-300 w-2 hover:bg-gray-400"
+                          }`}
                       ></button>
                     ))}
                   </div>
                 </div>
                 {/* Toggle and draggable section */}
-                <ToggleSection />
+                <ToggleSection
+                  activeButton={activeButton}
+                  onNextButton={handleNextButton}
+                />
               </div>
             )}
 
             {activeButton === 1 && (
-              <div className="text-center">
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                  التصميم والإعدادات
-                </h3>
-                <p className="text-gray-600">
-                  هنا يمكنك تخصيص التصميم والإعدادات
-                </p>
-              </div>
+              <>
+                <DesignSettings />
+                <div className="flex justify-between mt-8">
+                  <button
+                    onClick={() => setActiveButton(0)}
+                    className="px-3 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-all duration-300 font-medium cursor-pointer"
+                  >
+                    <FaArrowRightLong className="inline-block ml-1 text-xl" /> رجوع 
+                  </button>
+                  <button
+                    onClick={() => setActiveButton(2)}
+                    className="px-3 py-2 bg-[#1D79CF] text-white rounded-lg hover:bg-[#125696] transition-all duration-300 font-medium cursor-pointer"
+                  >
+                    التالي <FaArrowLeftLong className="inline-block mr-1 text-xl" />
+                  </button>
+                </div>
+              </>
             )}
 
             {activeButton === 2 && (
@@ -241,7 +263,7 @@ const CreateBusinessCard = () => {
           <h3 className="text-lg font-semibold text-gray-800 mb-4">
             معاينة البطاقة
           </h3>
-          <div className="p-4 bg-white rounded-lg shadow-md border border-gray-200">
+          <div className="p-4 bg-white rounded-lg shadow-md border border-gray-200 sticky top-20">
             {selectedTheme ? (
               <div className="flex flex-col items-center">
                 <div className="w-full h-48 bg-white shadow-lg rounded-lg overflow-hidden">

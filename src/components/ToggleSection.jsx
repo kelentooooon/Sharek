@@ -10,6 +10,7 @@ import linkedin_icon from '../assets/linkedin_icon.webp';
 import instagram_icon from '../assets/insta_icon.webp';
 import snapchat_icon from '../assets/snap_icon.webp';
 import link_icon from '../assets/links.webp'
+import { FaArrowLeftLong } from 'react-icons/fa6';
 
 // Constants
 const PLATFORM_DEFAULTS = {
@@ -39,7 +40,7 @@ const SECTION_KEYS = {
 };
 
 // Reusable Components
-const ToggleSwitch = ({ checked, onChange }) => (
+export const ToggleSwitch = ({ checked, onChange }) => (
     <label className="relative inline-flex items-center cursor-pointer" onClick={e => e.stopPropagation()}>
         <input
             type="checkbox"
@@ -70,7 +71,7 @@ const ImageUpload = ({ image, onUpload, alt, className = "w-32 h-32" }) => (
     </div>
 );
 
-const SectionHeader = ({ title, isOpen, onToggle, isEnabled, onToggleEnabled }) => (
+export const SectionHeader = ({ title, isOpen, onToggle, isEnabled, onToggleEnabled, showToggle=true }) => (
     <div
         className='bg-[#C9DAE2] p-4 rounded-4xl px-6 flex align-baseline justify-between cursor-pointer'
         onClick={onToggle}
@@ -80,7 +81,7 @@ const SectionHeader = ({ title, isOpen, onToggle, isEnabled, onToggleEnabled }) 
             <h3 className='text-[#1D79CF] text-xl font-medium'>{title}</h3>
         </div>
         <div className='flex align-baseline space-x-8'>
-            <ToggleSwitch checked={isEnabled} onChange={onToggleEnabled} />
+            {showToggle && <ToggleSwitch checked={isEnabled} onChange={onToggleEnabled} />}
             <div className="bg-white rounded-full p-1">
                 <IoIosArrowDown className={`text-[#1D79CF] text-2xl transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
             </div>
@@ -88,7 +89,7 @@ const SectionHeader = ({ title, isOpen, onToggle, isEnabled, onToggleEnabled }) 
     </div>
 );
 
-const ToggleSection = () => {
+const ToggleSection = ({ onNextButton }) => {
     const [openSections, setOpenSections] = useState({
         [SECTION_KEYS.PROFILE]: true,
         [SECTION_KEYS.CONTACT]: false,
@@ -411,7 +412,7 @@ const ToggleSection = () => {
                                 className="appearance-none bg-white border border-gray-300 rounded-lg px-3 py-2 focus:ring-1 focus:ring-blue-500 focus:border-blue-500 outline-none w-full"
                                 aria-label="Select contact type"
                             >
-                               {Object.keys(PLATFORM_DEFAULTS).map(platform => (
+                                {Object.keys(PLATFORM_DEFAULTS).map(platform => (
                                     <option key={platform} value={platform}>
                                         {PLATFORM_DEFAULTS[platform].title}
                                     </option>
@@ -933,11 +934,11 @@ const ToggleSection = () => {
             >
                 <label className="text-md font-medium text-gray-400 mb-2 flex gap-5 items-center">
                     العنوان والوصف
-                    <ToggleSwitch 
-                            checked={toggleStates.linksTitleandDescription} 
-                            onChange={() => toggleCheckbox('linksTitleandDescription')} 
-                        />
-                         </label>
+                    <ToggleSwitch
+                        checked={toggleStates.linksTitleandDescription}
+                        onChange={() => toggleCheckbox('linksTitleandDescription')}
+                    />
+                </label>
                 {toggleStates.linksTitleandDescription && (
                     <div className="bg-[#EEF3F6]  p-4 rounded-lg mb-8">
                         <label className="block text-md font-medium text-gray-400 mb-2">العنوان</label>
@@ -964,70 +965,70 @@ const ToggleSection = () => {
                     </div>
                 )}
                 {
-                links.map((link) => <div key={link.id} className="bg-[#EEF3F6] py-7 px-5 rounded-lg mb-6 relative">
-                    {links.length > 1 && (
-                        <button
-                            onClick={() => deleteLink(link.id)}
-                            className="absolute top-2 right-2 text-red-500 hover:text-red-700"
-                        >
-                            <FiTrash2 size={16} />
-                        </button>
-                    )}
-                    <label className="block text-md font-medium text-gray-400 mb-2">الرابط</label>
-                    <input
-                        type="text"
-                        placeholder="ادخل الرابط هنا"
-                        value={link.url}
-                        onChange={(e) => handleLinkChange(link.id, "url", e.target.value)}
-                        className="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 outline-none"
-                    />
-                    <div className='flex gap-4 my-5'>
-                        <div className="relative w-18 h-18 flex items-center justify-center overflow-hidden rounded-xl bg-[#DBDBDB]">
-                            <img
-                                src={link.image} alt="link image"
-                                className="w-full h-full object-cover border-2 border-[#DBDBDB] rounded-xl p-1"
-                            />
-                        </div>
-                        <div className="relative w-18 h-18 flex items-center justify-center overflow-hidden rounded-xl bg-[#DBDBDB]">
-                            <div className="text-gray-400 text-center p-4">
-                                <RiUploadCloud2Line className='text-3xl text-[#1D79CF]' />
+                    links.map((link) => <div key={link.id} className="bg-[#EEF3F6] py-7 px-5 rounded-lg mb-6 relative">
+                        {links.length > 1 && (
+                            <button
+                                onClick={() => deleteLink(link.id)}
+                                className="absolute top-2 right-2 text-red-500 hover:text-red-700"
+                            >
+                                <FiTrash2 size={16} />
+                            </button>
+                        )}
+                        <label className="block text-md font-medium text-gray-400 mb-2">الرابط</label>
+                        <input
+                            type="text"
+                            placeholder="ادخل الرابط هنا"
+                            value={link.url}
+                            onChange={(e) => handleLinkChange(link.id, "url", e.target.value)}
+                            className="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                        />
+                        <div className='flex gap-4 my-5'>
+                            <div className="relative w-18 h-18 flex items-center justify-center overflow-hidden rounded-xl bg-[#DBDBDB]">
+                                <img
+                                    src={link.image} alt="link image"
+                                    className="w-full h-full object-cover border-2 border-[#DBDBDB] rounded-xl p-1"
+                                />
                             </div>
-                            <input
-                                type="file"
-                                className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-                                onChange={(e) => handleLinkImageUpload(e, link.id)}
-                                accept="image/*"
-                            />
+                            <div className="relative w-18 h-18 flex items-center justify-center overflow-hidden rounded-xl bg-[#DBDBDB]">
+                                <div className="text-gray-400 text-center p-4">
+                                    <RiUploadCloud2Line className='text-3xl text-[#1D79CF]' />
+                                </div>
+                                <input
+                                    type="file"
+                                    className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                                    onChange={(e) => handleLinkImageUpload(e, link.id)}
+                                    accept="image/*"
+                                />
+                            </div>
                         </div>
-                    </div>
-                    <div className='flex gap-4'>
-                        {/* Title Input */}
-                        <div className='w-1/2'>
-                            <label className="block text-md font-medium text-gray-400 mb-2">العنوان    </label>                         <input
-                                type="text"
-                                placeholder="العنوان"
-                                value={link.title}
-                                onChange={(e) => handleLinkChange(link.id, "title", e.target.value)}
-                                className="w-full px-4 py-2 text-black-500 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
-                            />
+                        <div className='flex gap-4'>
+                            {/* Title Input */}
+                            <div className='w-1/2'>
+                                <label className="block text-md font-medium text-gray-400 mb-2">العنوان    </label>                         <input
+                                    type="text"
+                                    placeholder="العنوان"
+                                    value={link.title}
+                                    onChange={(e) => handleLinkChange(link.id, "title", e.target.value)}
+                                    className="w-full px-4 py-2 text-black-500 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                                />
+                            </div>
+
+
+                            {/* Subtitle Input */}
+                            <div className='w-1/2'>
+                                <label className="block text-md font-medium text-gray-400 mb-2">العنوان الفرعي</label>
+                                <input
+                                    type="text"
+                                    placeholder="العنوان الفرعي"
+                                    value={link.subtitle}
+                                    onChange={(e) => handleLinkChange(link.id, "subtitle", e.target.value)}
+                                    className="w-full px-4 py-2 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                                />
+                            </div>
+
                         </div>
 
-
-                        {/* Subtitle Input */}
-                        <div className='w-1/2'>
-                            <label className="block text-md font-medium text-gray-400 mb-2">العنوان الفرعي</label>
-                            <input
-                                type="text"
-                                placeholder="العنوان الفرعي"
-                                value={link.subtitle}
-                                onChange={(e) => handleLinkChange(link.id, "subtitle", e.target.value)}
-                                className="w-full px-4 py-2 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
-                            />
-                        </div>
-
-                    </div>
-
-                </div>)}
+                    </div>)}
                 <button
                     onClick={addLink}
                     className="mt-4 px-2 flex items-center gap-2 w-28 h-8 rounded-lg text-white font-medium duration-300 transition-all bg-[#20846c] hover:bg-[#3abf99] text-sm cursor-pointer">
@@ -1036,12 +1037,22 @@ const ToggleSection = () => {
                     اضافة رابط
                 </button>
             </div>
-            <button
-                onClick={handleShowAllData}
-                className="mt-8 px-4 py-2 rounded-lg bg-blue-600 text-white font-bold hover:bg-blue-700 transition"
-            >
-                عرض جميع البيانات
-            </button>
+            {/* Add Next Button at the bottom */}
+            <div className="flex justify-between items-center mt-8">
+                <button
+                    onClick={handleShowAllData}
+                    className="px-4 py-2 rounded-lg bg-gray-600 text-white font-bold hover:bg-gray-700 transition"
+                >
+                    عرض جميع البيانات
+                </button>
+
+                <button
+                    onClick={onNextButton}
+                    className="px-3 py-2 bg-[#1D79CF] text-white rounded-lg hover:bg-[#125696] transition-all duration-300 font-medium cursor-pointer"
+                >
+                    التالي <FaArrowLeftLong className="inline-block mr-1 text-xl" />
+                </button>
+            </div>
         </div>
     )
 }
